@@ -31,6 +31,13 @@ body {
     line-height: 1.7;
     background: var(--light-color);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +50,13 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 30px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
 }
 
 img {
@@ -120,6 +134,12 @@ a {
     padding: 1.5rem 0;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+}
+
 .logo {
     position: relative;
     animation: fadeInScale 0.6s ease-out;
@@ -137,6 +157,18 @@ a {
     position: relative;
     filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
     font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .logo h1 i {
+        font-size: 1.3rem;
+        margin-right: 5px;
+    }
 }
 
 .logo h1 i {
@@ -158,6 +190,12 @@ a {
     text-transform: none;
     font-family: 'Montserrat', sans-serif;
     white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .logo::after {
+        display: none;
+    }
 }
 
 .nav-menu {
@@ -1393,66 +1431,172 @@ a {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Genel düzenlemeler */
+    * {
+        max-width: 100vw;
+    }
+
+    /* Navigation */
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: #fff;
+        background-color: rgba(26, 15, 10, 0.98);
         width: 100%;
         text-align: center;
         transition: 0.3s;
         box-shadow: var(--shadow);
         padding: 2rem 0;
+        gap: 1rem;
     }
 
     .nav-menu.active {
         left: 0;
     }
 
+    .nav-link {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
     .mobile-only {
         display: block;
     }
 
-    .slide-content h2 {
-        font-size: 2rem;
+    /* Hero/Slider */
+    .hero {
+        height: 50vh;
+        min-height: 400px;
     }
 
-    .slide-content p {
-        font-size: 1rem;
+    .slide img {
+        object-fit: cover;
+        height: 100%;
     }
 
     .slide-content {
-        padding: 2rem;
+        padding: 1.5rem;
+        width: 90%;
+        max-width: 100%;
     }
 
+    .slide-content h2 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+    }
+
+    .slide-content p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    /* Slider controls */
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .slider-dots {
+        bottom: 15px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Grid layouts */
     .products-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 10px;
     }
 
     .contact-grid,
     .about-content,
     .product-detail-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Typography */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Tüm section'larda padding azalt */
+    section {
+        padding: 3rem 0 !important;
+    }
+
+    /* Product cards */
+    .product-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    /* İconlar ve butonlar */
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .badge {
+        font-size: 0.65rem;
+        padding: 2px 5px;
     }
 }
 
 @media (max-width: 480px) {
+    /* Çok küçük ekranlar için */
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
     .hero {
-        height: 400px;
+        height: 40vh;
+        min-height: 350px;
+    }
+
+    .slide-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .slide-content p {
+        font-size: 0.75rem;
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .slider-btn {
-        padding: 0.5rem;
-        font-size: 1rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 0 10px;
     }
 }
 

@@ -4,13 +4,33 @@
 
 {% block content %}
 <!-- Premium Brand Banner -->
-<div style="background: var(--gradient-gold); padding: 15px 0; text-align: center; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);">
+<div class="premium-banner" style="background: var(--gradient-gold); padding: 15px 0; text-align: center; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3); overflow: hidden;">
     <div class="container">
-        <p style="margin: 0; color: var(--dark-color); font-weight: 700; font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase;">
+        <p class="banner-text" style="margin: 0; color: var(--dark-color); font-weight: 700; font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase;">
             ✨ <strong>TEKELİLER TEKSTİL</strong> - Türkiye'nin En Prestijli Tekstil Markası | <span style="color: #fff;">30 Yıllık Mükemmellik Geleneği</span> ✨
         </p>
     </div>
 </div>
+
+<style>
+    @media (max-width: 768px) {
+        .premium-banner {
+            padding: 10px 0 !important;
+        }
+        .banner-text {
+            font-size: 0.65rem !important;
+            letter-spacing: 1px !important;
+            line-height: 1.4;
+            padding: 0 5px;
+        }
+    }
+    @media (max-width: 480px) {
+        .banner-text {
+            font-size: 0.55rem !important;
+            letter-spacing: 0.5px !important;
+        }
+    }
+</style>
 
 <!-- Hero Section with Slider -->
 <section class="hero">

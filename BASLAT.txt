@@ -1,0 +1,151 @@
+╔══════════════════════════════════════════════════════════╗
+║                                                          ║
+║       TEKELİLER TEKSTİL - E-TİCARET SİTESİ              ║
+║              BAŞLATMA TALİMATI                          ║
+║                                                          ║
+╚══════════════════════════════════════════════════════════╝
+
+✅ PROJE DURUMU: TAMAMEN HAZIR VE ÇALIŞIR DURUMDA!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  BAŞLATMAK İÇIN 3 BASIT ADIM:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  Terminal'i açın (CMD, PowerShell veya Git Bash)
+
+2️⃣  Aşağıdaki komutu yazın:
+
+    python app.py
+
+3️⃣  Tarayıcınızda şu adresi açın:
+
+    http://localhost:5000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ALTERNATİF BAŞLATMA YÖNTEMLERİ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Yöntem A: start.bat dosyasına çift tıklayın
+
+Yöntem B: Terminal'de şunu yazın: flask run
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ÇALIŞTIĞINI NASIL ANLARIM?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Terminal'de şu mesajları göreceksiniz:
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000
+ * Running on http://0.0.0.0:5000
+
+Bu mesajları gördüyseniz → ✅ Uygulama çalışıyor!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  TESTİ GEÇMEK İÇİN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Ana sayfada slider otomatik dönüyor mu?
+✓ "Ürünler" linkine tıkladığınızda ürünler görünüyor mu?
+✓ Ürün kartlarının üzerine gelince hover efekti çalışıyor mu?
+✓ Arama butonuna tıkladığınızda modal açılıyor mu?
+✓ Sepet ikonu çalışıyor mu?
+
+HEPSİ ÇALIŞIYORSA → 🎉 MÜKEMMEL!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ❌ HATA ALIRSAN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Hata 1: "Python bulunamadı"
+→ Python yüklü mü? Kontrol et: python --version
+→ PATH'e eklemeyi unutmuş olabilirsin
+
+Hata 2: "Flask bulunamadı"
+→ Terminal'de yaz: pip install Flask
+
+Hata 3: "Port kullanımda"
+→ app.py dosyasında port=5001 yap
+
+Hata 4: Sayfa açılıyor ama stilsiz
+→ Tarayıcıyı yenile: Ctrl+F5
+→ Önbelleği temizle: Ctrl+Shift+Del
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📱 MOBİL TEST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Aynı WiFi ağındaki telefon/tabletinden test etmek için:
+
+1. Bilgisayarının IP adresini öğren: ipconfig
+2. Telefonun tarayıcısında aç: http://[IP]:5000
+   Örnek: http://192.168.1.100:5000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🛑 DURDURMAK İÇİN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Terminal penceresinde: Ctrl + C
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📖 DAHA FAZLA BİLGİ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HIZLI_BASLANGIC.txt  → Hızlı referans
+KURULUM_REHBERI.md   → Detaylı kurulum
+GUNCELLEME_RAPORU.md → Yapılan değişiklikler
+README.md            → Proje hakkında
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 ÖNEMLİ: İlk çalıştırmadan önce gerekli paketleri yükle:
+
+pip install -r requirements.txt
+
+(Sadece bir kere yapılması yeterli)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ SİTENİN ÖZELLİKLERİ:
+
+🏠 Ana Sayfa
+   • Otomatik dönen 3 slayt
+   • Özellikler bölümü
+   • Öne çıkan ürünler
+   • Müşteri yorumları
+
+🛍️ Ürünler
+   • 6 adet örnek ürün
+   • Kategori filtreleme
+   • Arama özelliği
+   • Sepete ekleme
+
+📄 Diğer Sayfalar
+   • Ürün detay sayfası
+   • Hakkımızda
+   • İletişim formu
+
+📱 Responsive
+   • Masaüstü
+   • Tablet
+   • Mobil
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 İPUCU: İlk defa Flask kullanıyorsan, Python'un yüklü
+         olduğundan ve PATH'e eklendiğinden emin ol!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 HAZIRSIN! Şimdi python app.py yazıp Enter'a bas!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Son Güncelleme: 28 Ekim 2025
+Versiyon: 1.0.0
+
+© 2025 Tekeliler Tekstil - Tüm hakları saklıdır.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

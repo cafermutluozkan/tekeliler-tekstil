@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}İletişim - Tekeliler Tekstil{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>İletişim</h2>
+            <p>Bize ulaşın, size yardımcı olmaktan mutluluk duyarız</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3 style="margin-bottom: 2rem; color: var(--dark-color);">İletişim Bilgilerimiz</h3>
+
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Adres</h4>
+                        <p>Merkez Mahallesi, Atatürk Caddesi<br>Merkez İş Hanı<br>Bozyazı/Mersin</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telefon</h4>
+                        <p>+90 324 851 6240<br>Sabit Hat</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>E-posta</h4>
+                        <p>info@tekeliler.com<br>destek@tekeliler.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Çalışma Saatleri</h4>
+                        <p>Pazartesi - Cumartesi: 09:00 - 19:00<br>Pazar: 10:00 - 17:00</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">Bizi Takip Edin</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <form id="contactForm" style="background: #fff; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow);">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--dark-color);">Bize Mesaj Gönderin</h3>
+
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız *</label>
+                        <input type="text" id="name" name="name" required placeholder="Adınız ve soyadınız">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-posta Adresiniz *</label>
+                        <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefon Numaranız</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+90 555 123 45 67">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Konu</label>
+                        <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusu">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mesajınız *</label>
+                        <textarea id="message" name="message" required placeholder="Mesajınızı buraya yazın..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Gönder
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div style="margin-top: 4rem;">
+            <h3 style="text-align: center; margin-bottom: 2rem; color: var(--dark-color);">Bizi Ziyaret Edin</h3>
+            <div style="border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); height: 400px; background: var(--light-color); display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center; color: #666;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 4rem; margin-bottom: 1rem; color: var(--primary-color);"></i>
+                    <p>Harita burada görüntülenecek</p>
+                    <p style="font-size: 0.9rem;">Google Maps entegrasyonu eklenebilir</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div style="margin-top: 4rem;">
+            <div class="section-header">
+                <h2>Sıkça Sorulan Sorular</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">
+                        <i class="fas fa-question-circle"></i> Teslimat süresi ne kadar?
+                    </h4>
+                    <p>Siparişleriniz 3-5 iş günü içinde kargoya teslim edilir. İstanbul içi siparişlerde teslimat süresi 1-2 iş günüdür.</p>
+                </div>
+
+                <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">
+                        <i class="fas fa-question-circle"></i> İade koşulları nelerdir?
+                    </h4>
+                    <p>Ürünlerinizi teslim aldıktan sonra 14 gün içinde iade edebilirsiniz. Ürünün kullanılmamış ve orijinal ambalajında olması gerekmektedir.</p>
+                </div>
+
+                <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">
+                        <i class="fas fa-question-circle"></i> Toptan satış yapıyor musunuz?
+                    </h4>
+                    <p>Evet, toptan satış için özel fiyatlandırmalarımız bulunmaktadır. Detaylı bilgi için bizimle iletişime geçebilirsiniz.</p>
+                </div>
+
+                <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">
+                        <i class="fas fa-question-circle"></i> Özel ölçü halı yaptırabilir miyim?
+                    </h4>
+                    <p>Evet, özel ölçü ve tasarım taleplerini kabul ediyoruz. Uzman ekibimiz sizin için özel çözümler üretir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

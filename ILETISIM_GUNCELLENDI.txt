@@ -1,0 +1,127 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║        ✅ İLETİŞİM BİLGİLERİ GÜNCELLENDİ!                   ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+📅 Güncelleme Tarihi: 28 Ekim 2025
+🔄 Versiyon: 2.1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📌 GÜNCELLENEN İLETİŞİM BİLGİLERİ:
+
+📍 ADRES:
+   Merkez Mahallesi
+   Atatürk Caddesi
+   Merkez İş Hanı
+   Bozyazı/Mersin
+
+📞 TELEFON:
+   +90 324 851 6240
+
+📧 E-POSTA:
+   info@tekeliler.com
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ GÜNCELLENEN DOSYALAR:
+
+1. ✅ templates/base.html
+   - Footer iletişim bilgileri
+   - Adres: Bozyazı/Mersin
+   - Telefon: +90 324 851 6240
+
+2. ✅ templates/contact.html
+   - İletişim sayfası detaylı bilgiler
+   - Tam adres bilgisi
+   - Güncel telefon numarası
+
+3. ✅ templates/about.html
+   - Hakkımızda sayfası şirket bilgileri
+   - "Mersin'in Bozyazı ilçesinde" vurgusu
+   - "Dededen Toruna, Değişmeyen Kalite" sloganı
+
+4. ✅ Cache-busting versiyonu
+   - v2.0 → v2.1
+   - Tarayıcı önbelleği otomatik yenilenecek
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 BİLGİLERİN GÖRÜNÜM YERLERİ:
+
+1. FOOTER (Her sayfanın altında):
+   ┌─────────────────────────────────────────┐
+   │ İletişim                                 │
+   │ ☎ +90 324 851 6240                      │
+   │ ✉ info@tekeliler.com                    │
+   │ 📍 Merkez Mah. Atatürk Cad.             │
+   │ 🏢 Merkez İş Hanı, Bozyazı/Mersin       │
+   │ 🕐 09:00 - 19:00 (Pzt-Cts)              │
+   └─────────────────────────────────────────┘
+
+2. İLETİŞİM SAYFASI (http://localhost:5000/contact):
+   - Detaylı adres kartı
+   - Telefon bilgisi
+   - E-posta
+   - Çalışma saatleri
+   - Harita yeri (opsiyonel)
+
+3. HAKKIMIZDA SAYFASI:
+   - "Mersin'in Bozyazı ilçesinde bulunan
+     mağazamızdan bölge genelinde..."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 ÖNBELLEK TEMİZLEME:
+
+Değişiklikleri görmek için:
+
+1. Ctrl + F5 (Hard Refresh)
+2. Veya tarayıcıyı kapatıp tekrar açın
+3. Versiyon otomatik 2.1'e güncellendi
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ ÖZEL DOKUNUŞLAR:
+
+✅ Footer'da adres 2 satıra bölündü (daha okunabilir)
+✅ İletişim sayfasında 3 satır detaylı adres
+✅ Hakkımızda'da Bozyazı/Mersin vurgusu
+✅ "Dededen Toruna, Değişmeyen Kalite" sloganı eklendi
+✅ Bölgesel vurgu: "bölge genelinde hizmet"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 KONTROL LİSTESİ:
+
+✅ Footer iletişim bilgileri → GÜNCELLENDI
+✅ İletişim sayfası → GÜNCELLENDI
+✅ Hakkımızda sayfası → GÜNCELLENDI
+✅ Telefon numarası → +90 324 851 6240
+✅ Adres → Bozyazı/Mersin
+✅ Cache-busting → v2.1
+✅ Hata kontrolü → BAŞARILI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 GOOGLE MAPS EKLEMEK İSTERSENİZ:
+
+İletişim sayfasındaki harita bölümüne
+"Bozyazı Merkez İş Hanı" için Google Maps
+embed kodu eklenebilir.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ TAMAMLANDI!
+
+Tüm iletişim bilgileri başarıyla güncellendi.
+Tarayıcınızı yenileyin (Ctrl+F5) ve kontrol edin!
+
+🌐 Test: http://localhost:5000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Son Güncelleme: 28 Ekim 2025 - 23:52
+Versiyon: 2.1 (İletişim Bilgileri Güncellendi)
+

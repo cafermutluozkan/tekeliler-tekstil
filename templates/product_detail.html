@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name }} - Tekeliler Tekstil{% endblock %}
+
+{% block content %}
+<section class="product-detail">
+    <div class="container">
+        <div class="product-detail-grid">
+            <div class="product-detail-image">
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+            </div>
+            <div class="product-detail-info">
+                <span class="category">{{ product.category|upper }}</span>
+                <h1>{{ product.name }}</h1>
+
+                <div class="rating">
+                    {% for i in range(5) %}
+                        {% if i < product.rating|int %}
+                            <i class="fas fa-star"></i>
+                        {% else %}
+                            <i class="far fa-star"></i>
+                        {% endif %}
+                    {% endfor %}
+                    <span>({{ product.rating }}/5)</span>
+                </div>
+
+                <p class="price">{{ product.price }} ₺</p>
+
+                <div class="product-description">
+                    <h3>Ürün Açıklaması</h3>
+                    <p>{{ product.description }}</p>
+                </div>
+
+                <div class="product-meta">
+                    <div>
+                        <strong>Stok Durumu:</strong>
+                        <span style="color: {% if product.stock > 0 %}#28a745{% else %}#dc3545{% endif %};">
+                            {% if product.stock > 0 %}
+                                {{ product.stock }} adet stokta
+                            {% else %}
+                                Stokta yok
+                            {% endif %}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="quantity-selector">
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="{{ product.stock }}" readonly>
+                    <button onclick="increaseQuantity({{ product.stock }})">+</button>
+                </div>
+
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="addToCart({{ product.id }})" style="flex: 1;">
+                        <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                    </button>
+                    <button class="btn btn-secondary" onclick="buyNow()">
+                        <i class="fas fa-bolt"></i> Hemen Al
+                    </button>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--light-color); border-radius: 10px;">
+                    <h4><i class="fas fa-shipping-fast"></i> Ücretsiz Kargo</h4>
+                    <p>Türkiye geneline ücretsiz teslimat</p>
+                    <hr style="margin: 1rem 0;">
+                    <h4><i class="fas fa-undo-alt"></i> Kolay İade</h4>
+                    <p>14 gün içinde koşulsuz iade</p>
+                    <hr style="margin: 1rem 0;">
+                    <h4><i class="fas fa-shield-alt"></i> Güvenli Alışveriş</h4>
+                    <p>256-bit SSL güvenlik sertifikası</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div style="margin-top: 4rem;">
+            <div class="section-header">
+                <h2>Benzer Ürünler</h2>
+                <p>Size önerebileceğimiz diğer ürünler</p>
+            </div>
+            <div style="text-align: center; padding: 2rem;">
+                <a href="{{ url_for('products', category=product.category) }}" class="btn btn-outline">
+                    Kategorideki Diğer Ürünleri Görüntüle
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function increaseQuantity(max) {
+    const quantityInput = document.getElementById('quantity');
+    let value = parseInt(quantityInput.value);
+    if (value < max) {
+        quantityInput.value = value + 1;
+    }
+}
+
+function decreaseQuantity() {
+    const quantityInput = document.getElementById('quantity');
+    let value = parseInt(quantityInput.value);
+    if (value > 1) {
+        quantityInput.value = value - 1;
+    }
+}
+
+function buyNow() {
+    const productId = {{ product.id }};
+    addToCart(productId);
+    // Gerçek uygulamada buraya checkout sayfasına yönlendirme eklenecek
+    showNotification('Ürün sepete eklendi! Ödeme sayfasına yönlendiriliyorsunuz...', 'success');
+    setTimeout(() => {
+        // window.location.href = '/checkout';
+    }, 2000);
+}
+</script>
+{% endblock %}
+

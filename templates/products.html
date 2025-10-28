@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Ürünler - Tekeliler Tekstil{% endblock %}
+
+{% block content %}
+<section class="products-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Ürünlerimiz</h2>
+            <p>Geniş ürün yelpazemizden size uygun olanı seçin</p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter text-center" style="margin-bottom: 2rem;">
+            <a href="{{ url_for('products', category='all') }}"
+               class="btn {% if category == 'all' %}btn-primary{% else %}btn-outline{% endif %}"
+               style="margin: 0.5rem;">
+                Tümü
+            </a>
+            <a href="{{ url_for('products', category='hali') }}"
+               class="btn {% if category == 'hali' %}btn-primary{% else %}btn-outline{% endif %}"
+               style="margin: 0.5rem;">
+                Halılar
+            </a>
+            <a href="{{ url_for('products', category='kilim') }}"
+               class="btn {% if category == 'kilim' %}btn-primary{% else %}btn-outline{% endif %}"
+               style="margin: 0.5rem;">
+                Kilimler
+            </a>
+            <a href="{{ url_for('products', category='perde') }}"
+               class="btn {% if category == 'perde' %}btn-primary{% else %}btn-outline{% endif %}"
+               style="margin: 0.5rem;">
+                Perdeler
+            </a>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+            {% for product in products %}
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                    <div class="product-overlay">
+                        <button class="btn btn-secondary" onclick="addToCart({{ product.id }})">
+                            <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="category">{{ product.category|upper }}</span>
+                    <h3>{{ product.name }}</h3>
+                    <div class="rating">
+                        {% for i in range(5) %}
+                            {% if i < product.rating|int %}
+                                <i class="fas fa-star"></i>
+                            {% else %}
+                                <i class="far fa-star"></i>
+                            {% endif %}
+                        {% endfor %}
+                        <span>({{ product.rating }})</span>
+                    </div>
+                    <p class="price">{{ product.price }} ₺</p>
+                    <a href="{{ url_for('product_detail', product_id=product.id) }}" class="btn btn-outline" style="width: 100%;">
+                        Detayları Gör
+                    </a>
+                </div>
+            </div>
+            {% else %}
+            <div class="text-center" style="grid-column: 1/-1; padding: 3rem;">
+                <h3>Bu kategoride ürün bulunamadı</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+

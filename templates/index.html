@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Ana Sayfa - Tekeliler Tekstil | Premium Halı, Kilim ve Perde{% endblock %}
+
+{% block content %}
+<!-- Premium Brand Banner -->
+<div style="background: var(--gradient-gold); padding: 15px 0; text-align: center; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);">
+    <div class="container">
+        <p style="margin: 0; color: var(--dark-color); font-weight: 700; font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase;">
+            ✨ <strong>TEKELİLER TEKSTİL</strong> - Türkiye'nin En Prestijli Tekstil Markası | <span style="color: #fff;">30 Yıllık Mükemmellik Geleneği</span> ✨
+        </p>
+    </div>
+</div>
+
+<!-- Hero Section with Slider -->
+<section class="hero">
+    <div class="slider">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&auto=format&fit=crop&q=90" alt="Lüks Halı Koleksiyonu">
+            <div class="slide-content">
+                <h2>🏆 TEKELİLER TEKSTİL 🏆</h2>
+                <p>Geleneksel El Dokuma Halılar | Premium Koleksiyon</p>
+                <a href="{{ url_for('products', category='hali') }}" class="btn btn-primary">Koleksiyonu Keşfet</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?w=1920&auto=format&fit=crop&q=90" alt="Lüks Kilim">
+            <div class="slide-content">
+                <h2>💎 ÖZEL TASARIM KİLİMLER 💎</h2>
+                <p>Modern Sanat ile Geleneksel Zarafet Buluşuyor</p>
+                <a href="{{ url_for('products', category='kilim') }}" class="btn btn-primary">Şimdi İncele</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1517677129300-07b130802f46?w=1920&auto=format&fit=crop&q=90" alt="Premium Perdeler">
+            <div class="slide-content">
+                <h2>👑 LÜX PERDE ÇÖZÜMLERİ 👑</h2>
+                <p>Mekanlarınıza İmparatorluk Zarafeti Kazandırın</p>
+                <a href="{{ url_for('products', category='perde') }}" class="btn btn-primary">Tüm Modelleri Gör</a>
+            </div>
+        </div>
+    </div>
+    <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+    <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+</section>
+
+<!-- Brand Trust Section -->
+<section style="padding: 3rem 0; background: linear-gradient(135deg, #fff 0%, var(--light-color) 100%); text-align: center; border-bottom: 3px solid var(--secondary-color);">
+    <div class="container">
+        <h3 style="font-size: 2rem; color: var(--dark-color); margin-bottom: 2rem; font-weight: 800; letter-spacing: 2px;">
+            <i class="fas fa-certificate" style="color: var(--secondary-color); margin-right: 10px;"></i>
+            TEKELİLER TEKSTİL GÜVENCE MARKASI
+            <i class="fas fa-certificate" style="color: var(--secondary-color); margin-left: 10px;"></i>
+        </h3>
+        <div style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;">
+            <div>
+                <h2 style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 0.5rem; font-weight: 900;">30+</h2>
+                <p style="font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 1px;">Yıllık Tecrübe</p>
+            </div>
+            <div>
+                <h2 style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 0.5rem; font-weight: 900;">10K+</h2>
+                <p style="font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 1px;">Mutlu Müşteri</p>
+            </div>
+            <div>
+                <h2 style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 0.5rem; font-weight: 900;">%100</h2>
+                <p style="font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 1px;">Memnuniyet</p>
+            </div>
+            <div>
+                <h2 style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 0.5rem; font-weight: 900;">500+</h2>
+                <p style="font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 1px;">Ürün Çeşidi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Hızlı Kargo</h3>
+                <p>Türkiye geneline ücretsiz teslimat</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Kalite Garantisi</h3>
+                <p>30 yıllık tecrübe ve garanti</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>7/24 Destek</h3>
+                <p>Müşteri memnuniyeti önceliğimiz</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>El İşçiliği</h3>
+                <p>Özenle seçilmiş el dokuması ürünler</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="featured-products">
+    <div class="container">
+        <div class="section-header">
+            <h2>⭐ ÖNE ÇIKAN ÜRÜNLER ⭐</h2>
+            <p>TEKELİLER TEKSTİL Premium Koleksiyonundan Seçkin Parçalar</p>
+        </div>
+        <div class="products-grid">
+            {% for product in featured_products %}
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                    <div class="product-overlay">
+                        <button class="btn btn-secondary" onclick="addToCart({{ product.id }})">
+                            <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                        </button>
+                    </div>
+                    <div style="position: absolute; top: 20px; right: 20px; background: var(--gradient-gold); color: var(--dark-color); padding: 10px 20px; border-radius: 30px; font-weight: 800; font-size: 0.9rem; z-index: 3; box-shadow: 0 5px 20px rgba(0,0,0,0.3);">
+                        ⭐ PREMIUM
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="category">{{ product.category|upper }}</span>
+                    <h3>{{ product.name }}</h3>
+                    <div class="rating">
+                        {% for i in range(5) %}
+                            {% if i < product.rating|int %}
+                                <i class="fas fa-star"></i>
+                            {% else %}
+                                <i class="far fa-star"></i>
+                            {% endif %}
+                        {% endfor %}
+                        <span>({{ product.rating }})</span>
+                    </div>
+                    <p class="price">{{ product.price }} ₺</p>
+                    <a href="{{ url_for('product_detail', product_id=product.id) }}" class="btn btn-outline" style="width: 100%;">
+                        <i class="fas fa-eye"></i> Detayları Gör
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center" style="margin-top: 3rem;">
+            <a href="{{ url_for('products') }}" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.5rem 4rem;">
+                <i class="fas fa-th"></i> TÜM ÜRÜN KOLEKSİYONUNU KEŞFET
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>💬 MÜŞTERİ YORUMLARI</h2>
+            <p>TEKELİLER TEKSTİL Ailesi Neler Söylüyor?</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"TEKELİLER TEKSTİL'den aldığım halı gerçekten harika! Kalitesi ve işçiliği mükemmel. 30 yıllık tecrübe fark yaratıyor. Kesinlikle tavsiye ederim."</p>
+                <div class="customer">
+                    <div>
+                        <h4>Ayşe Yılmaz</h4>
+                        <span>⭐ Premium Müşteri - İstanbul</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Perdelerimiz tam istediğimiz gibi oldu. TEKELİLER TEKSTİL'in müşteri hizmetleri de çok ilgili ve profesyonel. Türkiye'nin en iyisi!"</p>
+                <div class="customer">
+                    <div>
+                        <h4>Mehmet Kaya</h4>
+                        <span>⭐ Premium Müşteri - Ankara</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Kaliteli ürünler ve prestijli hizmet. TEKELİLER TEKSTİL markasına güveniyorum. Kilimim herkes tarafından çok beğenildi!"</p>
+                <div class="customer">
+                    <div>
+                        <h4>Zeynep Demir</h4>
+                        <span>⭐ Premium Müşteri - İzmir</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2>🏆 TEKELİLER TEKSTİL 🏆</h2>
+        <p>Hayalinizdeki Lüks Yaşam Alanı İçin Özel Tasarımlar</p>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; font-weight: 600;">
+            ✨ Türkiye'nin En Prestijli Tekstil Markası ✨
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn">
+            <i class="fas fa-phone-alt"></i> ÜCRETSİZ DANIŞMANLIK ALIN
+        </a>
+    </div>
+</section>
+{% endblock %}
+

@@ -136,7 +136,7 @@ a {
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 1rem 0;
+        padding: 1.2rem 0;
     }
 }
 
@@ -157,23 +157,49 @@ a {
     position: relative;
     filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
     font-family: 'Playfair Display', serif;
-}
-
-@media (max-width: 768px) {
-    .logo h1 {
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-    }
-
-    .logo h1 i {
-        font-size: 1.3rem;
-        margin-right: 5px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
 }
 
 .logo h1 i {
     color: var(--secondary-color);
     margin-right: 10px;
+    font-size: 2.2rem;
+    position: absolute;
+    left: -45px;
+    top: 10px;
+}
+
+.logo-line1 {
+    display: block;
+    margin-bottom: 0;
+}
+
+.logo-line2 {
+    display: block;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        align-items: center;
+    }
+
+    .logo h1 i {
+        font-size: 1.1rem;
+        left: -30px;
+        top: 5px;
+    }
+
+    .logo-line1, .logo-line2 {
+        text-align: center;
+    }
+}
     font-size: 2.2rem;
 }
 
@@ -194,7 +220,13 @@ a {
 
 @media (max-width: 768px) {
     .logo::after {
-        display: none;
+        display: block;
+        font-size: 0.45rem;
+        letter-spacing: 1px;
+        bottom: -15px;
+        white-space: normal;
+        max-width: 200px;
+        line-height: 1.2;
     }
 }
 
@@ -1569,7 +1601,20 @@ a {
 @media (max-width: 480px) {
     /* Çok küçük ekranlar için */
     .logo h1 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .logo h1 i {
+        font-size: 0.9rem;
+        left: -25px;
+        top: 3px;
+    }
+
+    .logo::after {
+        font-size: 0.4rem;
+        letter-spacing: 0.5px;
+        bottom: -13px;
+        max-width: 150px;
     }
 
     .hero {
